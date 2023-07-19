@@ -1,5 +1,5 @@
 @charset "UFT-8";
-@import "mixin", "variables", "fonts", "reset", "main", "contents";
+@import "variables", "mixin", "fonts", "reset", "main", "contents";
 
 // comm.scss -
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
@@ -11,30 +11,65 @@
 
 // header
 #header {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $b;
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 70px;
   }
+  .head_right {
+    display: flex;
+  }
   .lst-util {
     display: flex;
-    .btn-g {
+    li {
+      display: flex;
+    }
+    .btn-g,
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 40px;
       height: 70px;
+      .material-icons-outlined {
+        font-size: 26px;
+      }
       &::before {
         font-size: 20px;
         font-family: "Font Awesome 6 Free";
       }
     }
-    .btn-search::before {
-      content: "\f002";
-      font-weight: 900;
+    // .btn-search::before {
+    //   content: "\f002";
+    //   font-weight: 900;
+    // }
+    // .btn-my::before {
+    //   content: "\f007";
+    //   font-weight: 400;
+    // }
+  }
+}
+
+.gnb-wrap {
+  .input-bugger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  .label-bugger {
+    .bar {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: #000;
     }
-    .btn-burger::before {
-      content: "\f007";
-      font-weight: 400;
-    }
+  }
+  #gnb {
+    display: none;
   }
 }
