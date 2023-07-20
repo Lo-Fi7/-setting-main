@@ -6,7 +6,10 @@
 
 // 공통
 .container {
-  padding: 0 4%;
+  padding: 0 $bopthMargin;
+}
+.bg-gray {
+  background: $gray-e;
 }
 
 // header
@@ -72,4 +75,78 @@
   #gnb {
     display: none;
   }
+}
+
+// main
+.section-g {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  s .sec-tit {
+    font-size: 20px;
+    color: $b;
+  }
+  .sec-cont {
+    margin-top: 20px;
+  }
+}
+
+.sec-cont {
+  .lst-shopping {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      width: calc(50% - $spacingList / 2);
+      margin-bottom: $spacingList;
+      .thumb-shopping {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        position: relative;
+        &::after {
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: $b;
+          position: absolute;
+          border-radius: inherit;
+          border: 1px solid rgba($b, 0.06);
+          background: rgba($b, 0.03);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: transform 1s;
+      }
+    }
+    a {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+.txt-shopping {
+  .txt-shopping__tit {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: $tit-Defult;
+  }
+  .txt-shopping__desc {
+    font-style: 12px;
+  }
+}
+//footer
+#footer {
+  margin-bottom: 200px;
+  border-top: 10px solid $b;
 }
