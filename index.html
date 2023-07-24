@@ -33,7 +33,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+      href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Round"
       rel="stylesheet"
     />
     <link
@@ -51,7 +51,6 @@
     <link rel="stylesheet" href="./dist/css/comm.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="./dist/js/include.js"></script>
     <script defer src="./dist/js/comm.js"></script>
   </head>
   <body>
@@ -61,18 +60,109 @@
       <a href="#footer"><span>풋터 바로가기</span></a>
     </div>
     <div class="wrap">
-      <header data-include-path="./outline/header.html"></header>
-      <div class="slide-wrap slide-name">slide</div>
+      <!-- logo 왼쪽 type -->
+      <header id="header" class="container">
+        <div class="inner">
+          <h1 id="logo">
+            <a href="#">Logo</a>
+          </h1>
+          <div class="head__right">
+            <div class="util">
+              <ul class="lst-util">
+                <li>
+                  <!-- a : 링크 연결 / button : 동작처리 -->
+                  <!-- 링크 연결 없이 스크립트 처리 -->
+                  <a href="javascript:void(0)">
+                    <span class="material-icons-outlined"> language </span>
+                  </a>
+                </li>
+                <li>
+                  <button class="btn-g btn-search">
+                    <span class="material-icons-outlined"> search </span>
+                    <span class="blind">검색</span>
+                  </button>
+                </li>
+                <li>
+                  <a href="#" class="btn-g btn-my">
+                    <span class="material-icons-outlined">
+                      account_circle
+                    </span>
+                    <span class="blind">마이페이지</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <nav class="gnb-wrap">
+              <input
+                type="checkbox"
+                name="gnbNav"
+                id="gnbNav"
+                class="input-burger"
+              />
+              <label for="gnbNav" class="label-burger">
+                <span class="blind">전체 메뉴 보기</span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </label>
+              <div id="gnb">navi</div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="swiper slide-g slide-intro">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://images.unsplash.com/photo-1689613188308-ef2815f15810?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+            />
+            <div class="swiper-slide__txt">
+              <strong>노을</strong>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Labore, tempora?
+              </p>
+              <a href="#">바로가기</a>
+            </div>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+      </div>
+
       <main id="main">
         <!-- section 제목이 있는 그룹 -->
-        <section class="bg-gray container section-g section-news">
+        <section class="bg-gray container section-g section-event">
           <div class="inner">
-            <h2 class="section-tit">섹션 제목</h2>
+            <h2 class="section-tit blind">Event</h2>
             <div class="section-contents">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis vero nulla vel excepturi explicabo in tenetur.
-              Veritatis, amet voluptatum odit esse qui id porro ut, quis
-              deserunt modi eum? Eum.
+              <ul class="lst-event">
+                <li>
+                  <img
+                    src="https://images.unsplash.com/photo-1682685797741-f0213d24418c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNjN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="event image"
+                  />
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <img
+                    src="https://images.unsplash.com/photo-1682685797741-f0213d24418c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNjN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="event image"
+                  />
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <img
+                    src="https://images.unsplash.com/photo-1682685797741-f0213d24418c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNjN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="event image"
+                  />
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -84,14 +174,14 @@
                 <li>
                   <a href="#">
                     <div class="thumb-shopping">
-                      <!-- <img
+                      <img
                         src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20230712_105%2F1689155687577SzQQM_JPEG%2FSE-d4e38024-44be-457b-9570-bfccd6e96af5.jpg%22&type=ff364_236&service=navermain"
                         alt="shopping"
-                      /> -->
+                      />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -118,8 +208,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -132,8 +222,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -146,8 +236,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -160,8 +250,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -174,8 +264,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -188,8 +278,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -202,8 +292,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -216,50 +306,8 @@
                       />
                     </div>
                     <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thumb-shopping">
-                      <img
-                        src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20230712_105%2F1689155687577SzQQM_JPEG%2FSE-d4e38024-44be-457b-9570-bfccd6e96af5.jpg%22&type=ff364_236&service=navermain"
-                        alt="shopping"
-                      />
-                    </div>
-                    <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thumb-shopping">
-                      <img
-                        src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20230712_105%2F1689155687577SzQQM_JPEG%2FSE-d4e38024-44be-457b-9570-bfccd6e96af5.jpg%22&type=ff364_236&service=navermain"
-                        alt="shopping"
-                      />
-                    </div>
-                    <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="thumb-shopping">
-                      <img
-                        src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20230712_105%2F1689155687577SzQQM_JPEG%2FSE-d4e38024-44be-457b-9570-bfccd6e96af5.jpg%22&type=ff364_236&service=navermain"
-                        alt="shopping"
-                      />
-                    </div>
-                    <div class="txt-shopping">
-                      <strong class="txt-shopping__tit">제목</strong>
-                      <p class="txt-shopping__desc">상품설명</p>
+                      <strong>제목</strong>
+                      <p>상품설명</p>
                     </div>
                   </a>
                 </li>
@@ -273,8 +321,16 @@
             <div class="section-contents">섹션 컨텐츠</div>
           </div>
         </section>
-      </main>      
-      <footer data-include-path="./outline/footer.html"></footer>
+      </main>
+      <footer id="footer" class="container">
+        <div class="inner">
+          <div class="footer__logo">logo</div>
+          <address>주소</address>
+          <a href="tel:1566-1566">1566-1566</a>
+          <a href="mailto:emali.com">email</a>
+          <div class="copyright">&#169;copyright 2023</div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
