@@ -2,6 +2,9 @@
 
 https://eehd80.github.io/-setting/!list.html
 
+파일 경로 샘플 : https://velog.io/@odada/%EC%82%AC%EC%9D%B4%ED%8A%B8-%ED%8F%B4%EB%8D%94-%EA%B2%BD%EB%A1%9C
+
+파일 이름 : 영문소문자, 한글 x, 띄어쓰기 x
 ## main
 
 https://eehd80.github.io/-setting/
@@ -18,13 +21,40 @@ https://eehd80.github.io/-setting/
 [list](https://eehd80.github.io/-setting/!list.html) <br/>
 [DEMO](https://eehd80.github.io/-setting/)
 
+## Naming Case (BEM)
+
+### kebab-case(케밥 표기법)
+
+- kebab-case, header-container, btn-list, menu-list ...
+- (하이픈)으로 단어를 연결하는 표기법
+- HTML 태그의 class 속성으로 흔히 사용됨
+
+### camelCase(카멜 표기법)
+
+- camelCase, typeName, lightBox, darkBox ...
+- 기본적으로 변수명을 모두 소문자로 씀
+- 여러 단어가 이어지는 경우 첫 단어를 제외하고 각 단어의 첫글자만 대문자로 지정
+
+### PascalCase(파스칼 표기법)
+
+- PascalCase, TypeName, LightBox, DarkBox ...
+- 카멜 표기법과 같으나, 파스칼 표기법은 첫번째 글자도 대문자로 선언
+
+### Snake_case(뱀 표기범)
+
+- snake_case, background_color, light_box, main_container ...
+- 단어를 \_(언더바)로 구분하는 표기법
+
+## BEM
+
+BEM이란? CSS 제작 방법론으로, 일종의 네이밍 컨벤션이라고 볼 수 있다. 개발, 디버깅, 유지보수를 위해 가능한 명확하게 네이밍하는 것이 그들의 목표이다.
 
 ## 문자 인코딩(Character Encoding) 설정
 
 문자가 인코딩되는 방식을 설정합니다.
 
 ```html
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 ```
 
 - `UTF-8`: 초성, 중성, 종성으로 구분하여 문자를 작성(권장)
@@ -63,7 +93,10 @@ KakaoTalk -
 <meta property="og:type" content="website" />
 <meta property="og:title" content="페이지 제목" />
 <meta property="og:description" content="페이지 설명" />
-<meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+<meta
+  property="og:image"
+  content="http://www.mysite.com/article/article1_featured_image.jpg"
+/>
 <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
 ```
 
@@ -84,7 +117,10 @@ KakaoTalk -
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="페이지 제목" />
 <meta name="twitter:description" content="페이지 설명" />
-<meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+<meta
+  name="twitter:image"
+  content="http://www.mysite.com/article/article1.html"
+/>
 <meta name="twitter:domain" content="사이트 명" />
 ```
 
@@ -124,7 +160,10 @@ https://www.naver.com/favicon.ico?1
 각 브라우저의 기본 스타일을 초기화합니다.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />1₩                                                                              111
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+/>1₩ 111
 ```
 
 ## Google Fonts
@@ -137,14 +176,17 @@ https://www.naver.com/favicon.ico?1
 
 ```html
 <link rel="preconnect" href="https://fonts.gstatic.com" />
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
 ```
 
 페이지에 폰트를 적용(CSS 상속)합니다.
 
 ```css
 body {
-    font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 ```
 
@@ -155,7 +197,17 @@ body {
 [Getting started for web](https://material.io/develop/web/getting-started)
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<!-- icons -->
+<link
+  href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+  rel="stylesheet"
+/>
+
+<!-- symbols -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+/>
 ```
 
 다음과 같이 사용할 수 있습니다.
@@ -171,7 +223,10 @@ body {
 [Getting started for web](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
 ```
 
 다음과 같이 사용할 수 있습니다.
@@ -188,22 +243,30 @@ body {
 > 자바스크립트 지식이 뛰어나지 않아도 충분히 사용할 수 있습니다!
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+  integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"
+  integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q=="
+  crossorigin="anonymous"
+></script>
 ```
 
-[.to() 사용법](https://greensock.com/docs/v3/GSAP/gsap.to())
+[.to() 사용법](<https://greensock.com/docs/v3/GSAP/gsap.to()>)
 [GSAP Easing](https://greensock.com/docs/v2/Easing)
 
 ```js
-gsap.to(요소, 시간, 옵션)
+gsap.to(요소, 시간, 옵션);
 // 또는
-TweenMax.to(요소, 시간, 옵션)
+TweenMax.to(요소, 시간, 옵션);
 ```
 
 ```js
-gsap.to(window, .7, {
-  scrollTo: 0
+gsap.to(window, 0.7, {
+  scrollTo: 0,
 });
 ```
 
@@ -215,7 +278,10 @@ gsap.to(window, .7, {
 
 ```html
 <!-- in HEAD -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <!-- in BODY -->
@@ -235,10 +301,10 @@ new Swiper(요소, 옵션);
 ```
 
 ```js
-new Swiper('.swiper-container', {
-  direction: 'vertical', // 수직 슬라이드
+new Swiper(".swiper-container", {
+  direction: "vertical", // 수직 슬라이드
   autoplay: true, // 자동 재생 여부
-  loop: true // 반복 재생 여부
+  loop: true, // 반복 재생 여부
 });
 ```
 
@@ -263,26 +329,26 @@ new Swiper('.swiper-container', {
 
 ```js
 // Youtube IFrame API를 비동기로 로드합니다.
-var tag = document.createElement('script');
+var tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
+var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubePlayerAPIReady() {
   // <div id="player"></div>
-  new YT.Player('player', {
-    videoId: 'An6LvWQuj_8', // 재생할 유튜브 영상 ID
+  new YT.Player("player", {
+    videoId: "An6LvWQuj_8", // 재생할 유튜브 영상 ID
     playerVars: {
       autoplay: true, // 자동 재생 유무
       loop: true, // 반복 재생 유무
-      playlist: 'An6LvWQuj_8' // 반복 재생할 유튜브 영상 ID 목록
+      playlist: "An6LvWQuj_8", // 반복 재생할 유튜브 영상 ID 목록
     },
     events: {
       // 영상이 준비되었을 때,
       onReady: function (event) {
         event.target.mute(); // 음소거!
-      }
-    }
+      },
+    },
   });
 }
 ```
@@ -299,14 +365,11 @@ function onYouTubePlayerAPIReady() {
 ```
 
 ```js
-new ScrollMagic
-  .Scene({ // 감시할 장면(Scene)을 추가
-    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: .8 // 화면의 80% 지점에서 보여짐 여부 감시
-  })
-  .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
-  .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당(필수!)
+new ScrollMagic.Scene({
+  // 감시할 장면(Scene)을 추가
+  triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+  triggerHook: 0.8, // 화면의 80% 지점에서 보여짐 여부 감시
+})
+  .setClassToggle(spyEl, "show") // 요소가 화면에 보이면 show 클래스 추가
+  .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당(필수!)
 ```
-
-
-
